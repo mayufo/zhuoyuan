@@ -42,6 +42,13 @@ section > h4::after {
   transform: translateX(-50%);
   top: 56px; }
 
+@keyframes down {
+  0% {
+    margin-top: -200px; }
+  100% {
+    opacity: 1;
+    margin-top: 0; } }
+
 @keyframes childNav {
   0% {
     margin-top: -50%;
@@ -71,6 +78,8 @@ section > h4::after {
   position: relative; }
 
 .nav-wrap nav {
+  animation: down ease-out 0.8s;
+  animation-iteration-count: 1;
   z-index: 2;
   position: absolute;
   top: 30px;
