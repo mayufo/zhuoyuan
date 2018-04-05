@@ -6,15 +6,20 @@
   font-size: 16px;
   font-family: "microsoft yahei"; }
 
+a {
+  text-decoration: none; }
+
 li {
   list-style: none; }
 
 img {
   object-fit: cover; }
 
-section {
-  padding-top: 90px;
+[data-scroll] {
   opacity: 0; }
+
+section {
+  padding-top: 90px; }
 
 section:first-child {
   padding-top: 0; }
@@ -121,7 +126,8 @@ section > h4::after {
   color: #333333; }
 
 .nav-wrap nav .nav .nav-item > a i {
-  font-size: 10px; }
+  font-size: 10px;
+  display: none; }
 
 .nav-wrap nav .nav .nav-item .children-list {
   display: none;
@@ -248,6 +254,10 @@ section > h4::after {
 
 .nav-wrap .swiper-container .swiper-button-prev:hover {
   background: url("../img/icon.png") -386px -116px no-repeat; }
+
+.nav-wrap .nav-banner {
+  width: 100vw;
+  height: 840px; }
 
 .feature ul {
   display: flex;

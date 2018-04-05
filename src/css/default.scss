@@ -46,6 +46,10 @@ $line: #cccccc;
   font-family: "microsoft yahei";
 }
 
+a {
+  text-decoration: none;
+}
+
 li {
   list-style: none;
 }
@@ -53,10 +57,11 @@ li {
 img {
   object-fit: cover;
 }
-
+[data-scroll] {
+  opacity: 0;
+}
 section {
   padding-top: 90px;
-  opacity: 0;
   &:first-child {
     padding-top: 0;
     //opacity: 1;
@@ -173,6 +178,7 @@ section {
           color: $text;
           i {
             font-size: 10px;
+            display: none;
           }
         }
 
@@ -313,6 +319,10 @@ section {
         background: url("../img/icon.png")  -386px -116px no-repeat;
       }
     }
+  }
+  .nav-banner {
+    width: 100vw;
+    height: 840px;
   }
 }
 // 特征
