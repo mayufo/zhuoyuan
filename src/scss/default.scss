@@ -35,6 +35,27 @@ $line: #cccccc;
   }
 }
 
+@mixin header ($paddingBottom) {
+  color: $active;
+  font-size: 28px;
+  font-weight: 700;
+  text-align: center;
+  position: relative;
+  padding-bottom: $paddingBottom;
+  &::after {
+    content: '';
+    display: block;
+    width: 114px;
+    height: 4px;
+    border-radius: 2px;
+    background: $line;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 56px;
+  }
+}
+
 //公共配置
 
 * {
@@ -70,24 +91,7 @@ section {
     opacity: 1;
   }
   > h4 {
-    color: $active;
-    font-size: 28px;
-    font-weight: 700;
-    text-align: center;
-    position: relative;
-    padding-bottom: 90px;
-    &::after {
-      content: '';
-      display: block;
-      width: 114px;
-      height: 4px;
-      border-radius: 2px;
-      background: $line;
-      position: absolute;
-      left: 50%;
-      transform: translateX(-50%);
-      top: 56px;
-    }
+    @include header(90px);
   }
 }
 
@@ -137,7 +141,6 @@ section {
 
 //导航&幻灯部分
 .nav-wrap {
-  background: #cccccc;
   width: 100vw;
   position: relative;
   //导航
@@ -322,7 +325,7 @@ section {
   }
   .nav-banner {
     width: 100vw;
-    height: 840px;
+    height: 500px;
   }
 }
 // 特征
@@ -406,15 +409,20 @@ section {
   }
   li {
     float: left;
+    &:nth-child(4n) {
+      a {
+        margin-right: 0;
+      }
+    }
   }
-  ul > li > a {
-    width: 294px;
+  a {
+    width: 296.5px;
     height: 220px;
     margin: 2px;
     display: inline-block;
     position: relative;
-
   }
+
   img {
     width: 294px;
     height: 220px;
@@ -553,7 +561,7 @@ section {
     }
   }
 }
-
+// 尾部样式
 footer {
   margin-top: 50px;
   height: 316px;
@@ -574,7 +582,7 @@ footer {
       color: inherit;
       font-size: 18px;
       position: relative;
-      left: 80px;
+      left: 90px;
       font-weight: 700;
       &:before {
         content: '';
@@ -589,6 +597,8 @@ footer {
 
     .contact {
       margin: 20px 0 26px 0;
+      position: relative;
+      left: 8px;
       li {
         color: $background;
         margin-bottom: 10px;
@@ -695,5 +705,61 @@ footer {
       color: $background;
       margin-top: 21px;
     }
+  }
+}
+
+.page-wrap {
+  .bread-nav {
+    margin: 0 auto;
+    width: 1200px;
+    padding: 30px;
+    box-shadow: 0 0 7px -1px rgba(0,0,0,0.45);
+    position: relative;
+    top: -40px;
+    background: white;
+    position: relative;
+    .position {
+      .nav-item {
+        cursor: pointer;
+        &:last-child {
+          color: $active;
+        }
+        &:not(:last-child) {
+          &:after {
+            content: '>';
+            padding-left: 7px;
+          }
+        }
+      }
+    }
+    .next {
+      float: right;
+      width: 260px;
+      line-height: 82px;
+      background: $active;
+      position: absolute;
+      right: 0;
+      top: 0;
+      padding: 0 25px;
+
+      .next-title {
+        padding-left: 15px;
+        max-width: 145px;
+        @include ellipsis;
+        position: absolute;
+        display: inline-block;
+        cursor: pointer;
+      }
+    }
+
+
+  }
+  h4 {
+    @include header(66px);
+  }
+  .page-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    line-height: 28px;
   }
 }

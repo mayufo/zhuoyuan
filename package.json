@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "sass": "node-sass -w src/css -o  src/css",
+    "sass": "node-sass -w src/scss -o  src/css",
     "dev": "http-server -c-1 -p 2222",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

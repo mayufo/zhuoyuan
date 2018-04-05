@@ -61,7 +61,6 @@
         scrollFn () {
             let scroll = $('[data-scroll]')
             let index = 0;
-            console.log(window.scrollY)
             for (let i = 0, item = $('[data-scroll]'); i < item.length; i++) {
                 if (Math.abs(item[i].offsetTop - window.scrollY) < Math.abs(item[index].offsetTop - window.scrollY)) {
                     index = i;
