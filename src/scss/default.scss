@@ -763,3 +763,29 @@ footer {
     line-height: 28px;
   }
 }
+// 公司简介
+.intro {
+  .intro-item1 {
+    height: 370px;
+    margin-bottom: 40px;
+    position: relative;
+    img {
+      position: absolute;
+      right: 0;
+      z-index: -1;
+    }
+  }
+  .intro-item2 {
+    position: relative;
+    img {
+      position: absolute;
+      z-index: -1;
+      top: -24px;
+      left: -5px;
+    }
+    .content {
+      max-width: 484px;
+      float: right;
+    }
+  }
+}
