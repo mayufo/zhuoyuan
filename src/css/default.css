@@ -296,7 +296,7 @@ section {
     margin-right: 0; }
 
 .application a {
-  width: 296.5px;
+  width: 296px;
   height: 220px;
   margin: 2px;
   display: inline-block;
@@ -557,7 +557,7 @@ footer {
   .page-wrap .bread-nav .next {
     float: right;
     width: 260px;
-    line-height: 82px;
+    line-height: 83px;
     background: #06bf75;
     position: absolute;
     right: 0;
@@ -616,3 +616,35 @@ footer {
   .intro .intro-item2 .content {
     max-width: 484px;
     float: right; }
+
+.culture ul {
+  width: 1048px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  height: 348px; }
+  .culture ul > li {
+    max-width: 220px;
+    text-align: center;
+    width: 168px; }
+    .culture ul > li h5 {
+      color: white;
+      font-size: 38px;
+      padding-top: 65px;
+      padding-bottom: 98px; }
+    .culture ul > li p {
+      width: 220px;
+      margin-left: -26px;
+      font-size: 18px;
+      line-height: 35px; }
+  .culture ul .culture-item1 {
+    background: url("../img/company-culture.jpg") no-repeat; }
+  .culture ul .culture-item2 {
+    background: url("../img/company-culture.jpg") -303px 0 no-repeat; }
+  .culture ul .culture-item3 {
+    background: url("../img/company-culture.jpg") -589px 0 no-repeat; }
+  .culture ul .culture-item4 {
+    background: url("../img/company-culture.jpg") -874px 0 no-repeat; }
+
+.culture .company-img {
+  margin-top: 110px; }

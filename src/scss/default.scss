@@ -416,7 +416,7 @@ section {
     }
   }
   a {
-    width: 296.5px;
+    width: 296px;
     height: 220px;
     margin: 2px;
     display: inline-block;
@@ -735,7 +735,7 @@ footer {
     .next {
       float: right;
       width: 260px;
-      line-height: 82px;
+      line-height: 83px;
       background: $active;
       position: absolute;
       right: 0;
@@ -787,5 +787,49 @@ footer {
       max-width: 484px;
       float: right;
     }
+  }
+}
+// 公司文化
+.culture {
+  //display: flex;
+  //justify-content: center;
+  ul {
+    width: 1048px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    height: 348px;
+    > li {
+      max-width: 220px;
+      text-align: center;
+      width: 168px;
+      h5 {
+        color: white;
+        font-size: 38px;
+        padding-top: 65px;
+        padding-bottom: 98px;
+      }
+      p {
+        width: 220px;
+        margin-left: -26px;
+        font-size: 18px;
+        line-height: 35px;
+      }
+    }
+    .culture-item1 {
+      background: url("../img/company-culture.jpg") no-repeat;
+    }
+    .culture-item2 {
+      background: url("../img/company-culture.jpg") -303px 0 no-repeat;
+    }
+    .culture-item3 {
+      background: url("../img/company-culture.jpg") -589px 0 no-repeat;
+    }
+    .culture-item4 {
+      background: url("../img/company-culture.jpg") -874px 0 no-repeat;
+    }
+  }
+  .company-img {
+    margin-top: 110px;
   }
 }
