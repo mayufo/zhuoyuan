@@ -743,12 +743,21 @@ footer {
       padding: 0 25px;
 
       .next-title {
-        padding-left: 15px;
+        padding-left: 56px;
         max-width: 145px;
         @include ellipsis;
         position: absolute;
         display: inline-block;
         cursor: pointer;
+        &:before {
+          content: '';
+          background: url("../img/icon.png") -4px -2px no-repeat;
+          width: 26px;
+          height: 20px;
+          position: absolute;
+          top: 29px;
+          left: 22px;
+        }
       }
     }
 
@@ -761,6 +770,7 @@ footer {
     max-width: 1200px;
     margin: 0 auto;
     line-height: 28px;
+    @include clearfix;
   }
 }
 // 公司简介
@@ -791,8 +801,6 @@ footer {
 }
 // 公司文化
 .culture {
-  //display: flex;
-  //justify-content: center;
   ul {
     width: 1048px;
     margin: 0 auto;
@@ -831,5 +839,198 @@ footer {
   }
   .company-img {
     margin-top: 110px;
+  }
+}
+// 发展历程
+.development {
+  //.development-year {
+  //  width: 1200px;
+  //  position: relative;
+  //  &:before {
+  //    content: '';
+  //    height: 36px;
+  //    width: 36px;
+  //    border-radius: 50%;
+  //    position: absolute;
+  //    left: 50%;
+  //    top: 48px;
+  //    transform: translateX(-50%);
+  //    background: $line;
+  //  }
+  //  &:after {
+  //    content: '';
+  //    height: 22px;
+  //    width: 22px;
+  //    border-radius: 50%;
+  //    position: absolute;
+  //    top: 55px;
+  //    left: 50%;
+  //    transform: translateX(-50%);
+  //    background: white;
+  //  }
+  //  &:nth-child(even) {
+  //    h5 {
+  //      font-size: 24px;
+  //      color: $active;
+  //      text-align: center;
+  //      position: absolute;
+  //      right: 50%;
+  //      top: 52px;
+  //      margin-right: 46px;
+  //      &:before {
+  //        font-family: "iconfont" !important;
+  //        margin: 0 10px 0 2px;
+  //        font-size: 24px;
+  //        content: '\e9f9';
+  //        transform: rotate(180deg);
+  //        display: inline-block;
+  //      }
+  //    }
+  //    ul {
+  //      width: 50%;
+  //      border-right: 2px solid $line;
+  //      padding: 20px 0;
+  //      position: relative;
+  //      top: 33px;
+  //    }
+  //    li {
+  //      margin-bottom: 16px;
+  //      color: $text-light;
+  //      font-size: 18px;
+  //      position: relative;
+  //      left: 20px;
+  //      width: 67%;
+  //      text-align: right;
+  //
+  //      &:before {
+  //        content: "\e654";
+  //        font-family: "iconfont" !important;
+  //        font-style: normal;
+  //        font-size: 40px;
+  //        position: absolute;
+  //        right: -32px;
+  //        top: -2px;
+  //        color: $background;
+  //      }
+  //    }
+  //  }
+  //}
+  //.development-year {
+  //  &:nth-child(odd) {
+  //    h5 {
+  //      font-size: 24px;
+  //      color: $active;
+  //      text-align: center;
+  //      position: absolute;
+  //      left: 50%;
+  //      top: 52px;
+  //      margin-left: 46px;
+  //      &:before {
+  //        font-family: "iconfont" !important;
+  //        margin: 0 10px 0 2px;
+  //        font-size: 24px;
+  //        content: '\e9f9';
+  //        position: absolute;
+  //        right: -45px;
+  //      }
+  //    }
+  //    ul {
+  //      width: 50%;
+  //      border-right: 2px solid $line;
+  //      padding: 20px 0;
+  //      position: relative;
+  //      top: 33px;
+  //    }
+  //    li {
+  //      margin-bottom: 16px;
+  //      color: $text-light;
+  //      font-size: 18px;
+  //      position: relative;
+  //      left: 20px;
+  //      width: 67%;
+  //      text-align: right;
+  //      &:before {
+  //        content: "\e654";
+  //        font-family: "iconfont" !important;
+  //        font-style: normal;
+  //        font-size: 40px;
+  //        position: absolute;
+  //        right: -32px;
+  //        top: -2px;
+  //        color: $background;
+  //      }
+  //    }
+  //
+  //  }
+  //}
+  .page-content {
+    position: relative;
+    height: 500px;
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      width: 4px;
+      background: $line;
+      left: 50%;
+      margin-left: -2px;
+      height: 100%;
+    }
+    .development-item {
+      clear: both;
+      width: 50%;
+      position: relative;
+
+      &:nth-child(even) {
+        float: left;
+        text-align: right;
+        padding-right: 40px;
+        &:before {
+          content: '';
+          height: 36px;
+          width: 36px;
+          border-radius: 50%;
+          position: absolute;
+          right: -18px;
+          top: 0;
+          background: $line;
+        }
+        &:after {
+          content: '';
+          height: 22px;
+          width: 22px;
+          border-radius: 50%;
+          position: absolute;
+          top: 7px;
+          right: -11px;
+          background: white;
+        }
+      }
+      &:nth-child(odd) {
+        float: right;
+        text-align: left;
+        padding-left: 40px;
+        &:before {
+          content: '';
+          height: 36px;
+          width: 36px;
+          border-radius: 50%;
+          position: absolute;
+          left: -18px;
+          top: 0;
+          background: $line;
+        }
+        &:after {
+          content: '';
+          height: 22px;
+          width: 22px;
+          border-radius: 50%;
+          position: absolute;
+          top: 7px;
+          left: -11px;
+          background: white;
+        }
+      }
+    }
   }
 }

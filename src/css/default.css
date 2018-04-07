@@ -564,7 +564,7 @@ footer {
     top: 0;
     padding: 0 25px; }
     .page-wrap .bread-nav .next .next-title {
-      padding-left: 15px;
+      padding-left: 56px;
       max-width: 145px;
       white-space: nowrap;
       overflow: hidden;
@@ -572,6 +572,14 @@ footer {
       position: absolute;
       display: inline-block;
       cursor: pointer; }
+      .page-wrap .bread-nav .next .next-title:before {
+        content: '';
+        background: url("../img/icon.png") -4px -2px no-repeat;
+        width: 26px;
+        height: 20px;
+        position: absolute;
+        top: 29px;
+        left: 22px; }
 
 .page-wrap h4 {
   color: #06bf75;
@@ -596,6 +604,11 @@ footer {
   max-width: 1200px;
   margin: 0 auto;
   line-height: 28px; }
+  .page-wrap .page-content:before, .page-wrap .page-content:after {
+    content: " ";
+    display: table; }
+  .page-wrap .page-content:after {
+    clear: both; }
 
 .intro .intro-item1 {
   height: 370px;
@@ -648,3 +661,64 @@ footer {
 
 .culture .company-img {
   margin-top: 110px; }
+
+.development .page-content {
+  position: relative;
+  height: 500px; }
+  .development .page-content:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 4px;
+    background: #cccccc;
+    left: 50%;
+    margin-left: -2px;
+    height: 100%; }
+  .development .page-content .development-item {
+    clear: both;
+    width: 50%;
+    position: relative; }
+    .development .page-content .development-item:nth-child(even) {
+      float: left;
+      text-align: right;
+      padding-right: 40px; }
+      .development .page-content .development-item:nth-child(even):before {
+        content: '';
+        height: 36px;
+        width: 36px;
+        border-radius: 50%;
+        position: absolute;
+        right: -18px;
+        top: 0;
+        background: #cccccc; }
+      .development .page-content .development-item:nth-child(even):after {
+        content: '';
+        height: 22px;
+        width: 22px;
+        border-radius: 50%;
+        position: absolute;
+        top: 7px;
+        right: -11px;
+        background: white; }
+    .development .page-content .development-item:nth-child(odd) {
+      float: right;
+      text-align: left;
+      padding-left: 40px; }
+      .development .page-content .development-item:nth-child(odd):before {
+        content: '';
+        height: 36px;
+        width: 36px;
+        border-radius: 50%;
+        position: absolute;
+        left: -18px;
+        top: 0;
+        background: #cccccc; }
+      .development .page-content .development-item:nth-child(odd):after {
+        content: '';
+        height: 22px;
+        width: 22px;
+        border-radius: 50%;
+        position: absolute;
+        top: 7px;
+        left: -11px;
+        background: white; }
