@@ -221,9 +221,6 @@ section {
       left: 0; }
       .nav-wrap .swiper-container .swiper-button-prev:hover {
         background: url("../img/icon.png") -386px -116px no-repeat; }
-  .nav-wrap .nav-banner {
-    width: 100vw;
-    height: 500px; }
 
 .feature ul {
   display: flex;
@@ -964,6 +961,17 @@ footer {
         top: 6px; }
     .new-page .new-wrap .active .new-info .time {
       color: white; }
+
+.new-content-page .new-time {
+  color: #999999; }
+
+.new-content-page h4 {
+  color: #333333; }
+
+.new-content-page .new-time {
+  text-align: center;
+  position: relative;
+  top: -22px; }
 
 .paging {
   display: flex;

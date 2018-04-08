@@ -119,7 +119,6 @@ section {
   }
 }
 // 滑动
-
 @keyframes up {
   0% {
     opacity:0;
@@ -322,10 +321,6 @@ section {
         background: url("../img/icon.png")  -386px -116px no-repeat;
       }
     }
-  }
-  .nav-banner {
-    width: 100vw;
-    height: 500px;
   }
 }
 // 特征
@@ -1299,6 +1294,20 @@ footer {
         }
       }
     }
+  }
+}
+// 新闻详情页
+.new-content-page {
+  .new-time {
+    color: $background;
+  }
+  h4 {
+    color: $text;
+  }
+  .new-time {
+    text-align: center;
+    position: relative;
+    top: -22px;
   }
 }
 // 分页
