@@ -19,3 +19,5 @@ apply.html 行业应用
 浏览地址 https://mayufo.github.io/zhuoyuan/apply
 
 
+new.html 新闻页面
+浏览地址 https://mayufo.github.io/zhuoyuan/new
