@@ -9,6 +9,7 @@
             this.featureInit()
             this.applicationInit()
             this.scrollInit()
+            this.applyInit()
         },
         navInit () {
             // 当有子菜单的时候显示icon
@@ -60,13 +61,15 @@
         },
         scrollFn () {
             let scroll = $('[data-scroll]')
-            let index = 0;
-            for (let i = 0, item = $('[data-scroll]'); i < item.length; i++) {
-                if (Math.abs(item[i].offsetTop - window.scrollY) < Math.abs(item[index].offsetTop - window.scrollY)) {
-                    index = i;
+            if (scroll) {
+                let index = 0;
+                for (let i = 0, item = $('[data-scroll]'); i < item.length; i++) {
+                    if (Math.abs(item[i].offsetTop - window.scrollY) < Math.abs(item[index].offsetTop - window.scrollY)) {
+                        index = i;
+                    }
                 }
+                $(scroll[index]).addClass('scroll')
             }
-            $(scroll[index]).addClass('scroll')
         }
     }
     controller.init()

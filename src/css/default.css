@@ -722,3 +722,81 @@ footer {
         top: 7px;
         left: -11px;
         background: white; }
+
+.apply .apply-wrap {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap; }
+  .apply .apply-wrap li {
+    position: relative;
+    margin-bottom: 58px; }
+    .apply .apply-wrap li img {
+      width: 285px;
+      height: 197px; }
+    .apply .apply-wrap li h5, .apply .apply-wrap li p {
+      text-align: center; }
+    .apply .apply-wrap li h5 {
+      font-size: 20px;
+      font-weight: 700;
+      margin-top: 10px;
+      margin-bottom: 5px; }
+    .apply .apply-wrap li .intro {
+      display: none;
+      width: 285px;
+      height: 197px;
+      background: rgba(0, 0, 0, 0.7);
+      position: absolute;
+      top: 0;
+      left: 0; }
+      .apply .apply-wrap li .intro p {
+        position: absolute;
+        top: 74px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 204px;
+        color: #06bf75;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        text-overflow: ellipsis;
+        -webkit-line-clamp: 2;
+        overflow: hidden;
+        word-break: break-all; }
+      .apply .apply-wrap li .intro .arrow {
+        background: url("../img/icon.png") -756px -118px no-repeat;
+        position: absolute;
+        top: 144px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 26px;
+        height: 16px; }
+  .apply .apply-wrap .active {
+    cursor: pointer; }
+    .apply .apply-wrap .active .intro {
+      display: block; }
+    .apply .apply-wrap .active p, .apply .apply-wrap .active h5 {
+      color: #06bf75; }
+
+.apply .paging {
+  display: flex;
+  justify-content: center; }
+  .apply .paging span {
+    display: inline-block;
+    color: #cccccc; }
+  .apply .paging .active {
+    color: #06bf75;
+    cursor: pointer; }
+  .apply .paging .page {
+    display: flex;
+    justify-content: center; }
+    .apply .paging .page li {
+      padding: 0 17px; }
+      .apply .paging .page li:first-child {
+        padding-left: 34px; }
+      .apply .paging .page li:last-child {
+        padding-right: 34px; }
+    .apply .paging .page li a {
+      cursor: pointer;
+      color: #cccccc; }
+    .apply .paging .page .active a {
+      cursor: auto;
+      color: #333333; }

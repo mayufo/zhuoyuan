@@ -5,6 +5,7 @@
         },
         bindEvent () {
             this.navInit()
+            this.applyInit()
         },
         navInit () {
             // 当有子菜单的时候显示icon
@@ -14,6 +15,14 @@
                 $(e.currentTarget).addClass('active')
             })
             $('.nav > li').on('mouseleave', function (e) {
+                $(e.currentTarget).removeClass('active')
+            })
+        },
+        applyInit () {
+            $('.apply-wrap > li').on('mouseenter', function (e) {
+                $(e.currentTarget).addClass('active')
+            })
+            $('.apply-wrap > li').on('mouseleave', function (e) {
                 $(e.currentTarget).removeClass('active')
             })
         }

@@ -1034,3 +1034,97 @@ footer {
     }
   }
 }
+.apply {
+  .apply-wrap {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    li {
+      position: relative;
+      margin-bottom: 58px;
+      img {
+        width: 285px;
+        height: 197px;
+      }
+      h5, p {
+        text-align: center;
+      }
+      h5 {
+        font-size: 20px;
+        font-weight: 700;
+        margin-top: 10px;
+        margin-bottom: 5px;
+      }
+      .intro {
+        display: none;
+        width: 285px;
+        height: 197px;
+        background: rgba(0, 0, 0, 0.7);
+        position: absolute;
+        top: 0;
+        left: 0;
+        p {
+          position: absolute;
+          top: 74px;
+          left: 50%;
+          transform: translateX(-50%);
+          width: 204px;
+          color: $active;
+          @include multiEllipsis(2);
+        }
+        .arrow {
+          background: url("../img/icon.png") -756px -118px no-repeat;
+          position: absolute;
+          top: 144px;
+          left: 50%;
+          transform: translateX(-50%);
+          width: 26px;
+          height: 16px;
+        }
+      }
+
+    }
+    .active {
+      cursor: pointer;
+      .intro {
+        display: block;
+      }
+      p, h5 {
+        color: $active;
+      }
+    }
+  }
+  .paging {
+    display: flex;
+    justify-content: center;
+    span {
+      display: inline-block;
+      color: $line;
+    }
+    .active {
+      color: $active;
+      cursor: pointer;
+    }
+    .page {
+      display: flex;
+      justify-content: center;
+      li {
+        padding: 0 17px;
+        &:first-child {
+          padding-left: 34px;
+        }
+        &:last-child {
+          padding-right: 34px;
+        }
+      }
+      li a {
+          cursor: pointer;
+          color: $line;
+      }
+      .active a {
+        cursor: auto;
+        color: $text;
+      }
+    }
+  }
+}
