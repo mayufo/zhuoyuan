@@ -1305,7 +1305,7 @@ footer {
 .paging {
   display: flex;
   justify-content: center;
-  span {
+  > a {
     display: inline-block;
     color: $line;
   }
