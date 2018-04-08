@@ -3,17 +3,19 @@ npm run sass // 编译css
 npm run dev // 运行
 
 
-index.html // 首页
+index.html  首页
 浏览地址 https://mayufo.github.io/zhuoyuan/
 
 
-intro.html // 公司简介 详情页面
+intro.html 公司简介 详情页面
 浏览地址 https://mayufo.github.io/zhuoyuan/intro
 
-companyCulture.html //企业文化
+companyCulture.html  企业文化
 浏览地址 https://mayufo.github.io/zhuoyuan/companyCulture
 
-development.html // 发展 未完
+development.html 发展 未完
 
-apply.html // 行业应用
+apply.html 行业应用
 浏览地址 https://mayufo.github.io/zhuoyuan/apply
+
+
