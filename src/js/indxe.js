@@ -9,7 +9,6 @@
             this.featureInit()
             this.applicationInit()
             this.scrollInit()
-            this.applyInit()
         },
         navInit () {
             // 当有子菜单的时候显示icon
