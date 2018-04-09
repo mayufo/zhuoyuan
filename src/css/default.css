@@ -543,8 +543,7 @@ footer {
   box-shadow: 0 0 7px -1px rgba(0, 0, 0, 0.45);
   position: relative;
   top: -40px;
-  background: white;
-  position: relative; }
+  background: white; }
   .page-wrap .bread-nav .position .nav-item {
     cursor: pointer; }
     .page-wrap .bread-nav .position .nav-item:last-child {
@@ -600,7 +599,7 @@ footer {
 
 .page-wrap .page-content {
   max-width: 1200px;
-  margin: 0 auto;
+  margin: 40px auto;
   line-height: 28px; }
   .page-wrap .page-content:before, .page-wrap .page-content:after {
     content: " ";
@@ -661,12 +660,11 @@ footer {
   margin-top: 110px; }
 
 .development .page-content {
-  position: relative;
-  height: 500px; }
+  position: relative; }
   .development .page-content:before {
     content: '';
     position: absolute;
-    top: 0;
+    top: -38px;
     width: 4px;
     background: #cccccc;
     left: 50%;
@@ -676,6 +674,21 @@ footer {
     clear: both;
     width: 50%;
     position: relative; }
+    .development .page-content .development-item .development-header {
+      position: relative;
+      margin-top: 3px; }
+    .development .page-content .development-item h5, .development .page-content .development-item .icon-play {
+      color: #06bf75;
+      font-size: 20px; }
+    .development .page-content .development-item .icon-play {
+      position: absolute;
+      top: 1px; }
+    .development .page-content .development-item ul {
+      position: relative;
+      top: -26px; }
+      .development .page-content .development-item ul li {
+        font-size: 16px;
+        line-height: 30px; }
     .development .page-content .development-item:nth-child(even) {
       float: left;
       text-align: right;
@@ -698,6 +711,25 @@ footer {
         top: 7px;
         right: -11px;
         background: white; }
+      .development .page-content .development-item:nth-child(even) .development-header .icon-play {
+        right: 70px;
+        transform: rotate(180deg);
+        display: inline-block; }
+      .development .page-content .development-item:nth-child(even) ul {
+        left: -120px; }
+        .development .page-content .development-item:nth-child(even) ul li {
+          max-width: 400px;
+          left: 162px;
+          position: relative; }
+          .development .page-content .development-item:nth-child(even) ul li:before {
+            content: "\e654";
+            font-family: "iconfont" !important;
+            font-style: normal;
+            font-size: 40px;
+            position: absolute;
+            right: -32px;
+            top: -2px;
+            color: #999999; }
     .development .page-content .development-item:nth-child(odd) {
       float: right;
       text-align: left;
@@ -720,6 +752,22 @@ footer {
         top: 7px;
         left: -11px;
         background: white; }
+      .development .page-content .development-item:nth-child(odd) .development-header .icon-play {
+        left: 70px; }
+      .development .page-content .development-item:nth-child(odd) ul {
+        right: -120px; }
+        .development .page-content .development-item:nth-child(odd) ul li {
+          position: relative;
+          max-width: 400px; }
+          .development .page-content .development-item:nth-child(odd) ul li:before {
+            content: "\e654";
+            font-family: "iconfont" !important;
+            font-style: normal;
+            font-size: 40px;
+            position: absolute;
+            left: -34px;
+            top: -2px;
+            color: #999999; }
 
 .apply .apply-wrap {
   display: flex;

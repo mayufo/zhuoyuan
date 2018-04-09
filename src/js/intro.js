@@ -7,6 +7,7 @@
             this.navInit()
             this.applyInit()
             this.newInit()
+            this.developmentInit()
         },
         navInit () {
             // 当有子菜单的时候显示icon
@@ -38,7 +39,11 @@
                     $(e.currentTarget).removeClass('active')
                 }
             })
+        },
+        developmentInit () {
+            $('.page-content').css('height', $('.page-content').height() + 20)
         }
+
 
     }
     controller.init()

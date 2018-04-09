@@ -711,7 +711,6 @@ footer {
     position: relative;
     top: -40px;
     background: white;
-    position: relative;
     .position {
       .nav-item {
         cursor: pointer;
@@ -762,7 +761,7 @@ footer {
   }
   .page-content {
     max-width: 1200px;
-    margin: 0 auto;
+    margin: 40px auto;
     line-height: 28px;
     @include clearfix;
   }
@@ -959,11 +958,10 @@ footer {
   //}
   .page-content {
     position: relative;
-    height: 500px;
     &:before {
       content: '';
       position: absolute;
-      top: 0;
+      top: -38px;
       width: 4px;
       background: $line;
       left: 50%;
@@ -974,11 +972,34 @@ footer {
       clear: both;
       width: 50%;
       position: relative;
+      .development-header {
+        position: relative;
+        margin-top: 3px;
+      }
+      h5, .icon-play {
+        color: $active;
+        font-size: 20px;
+      }
 
+      .icon-play {
+        position: absolute;
+        top: 1px;
+      }
+
+      ul {
+        position: relative;
+        top: -26px;
+        li {
+          font-size: 16px;
+          line-height: 30px;
+        }
+      }
+      //左边
       &:nth-child(even) {
         float: left;
         text-align: right;
         padding-right: 40px;
+
         &:before {
           content: '';
           height: 36px;
@@ -999,7 +1020,34 @@ footer {
           right: -11px;
           background: white;
         }
+        .development-header {
+          .icon-play {
+            right: 70px;
+            transform: rotate(180deg);
+            display: inline-block;
+          }
+        }
+        ul {
+          left: -120px;
+          li {
+            max-width: 400px;
+            left: 162px;
+            position: relative;
+            &:before {
+              content: "\e654";
+              font-family: "iconfont" !important;
+              font-style: normal;
+              font-size: 40px;
+              position: absolute;
+              right: -32px;
+              top: -2px;
+              color: $background;
+            }
+          }
+        }
+
       }
+      //右边
       &:nth-child(odd) {
         float: right;
         text-align: left;
@@ -1023,6 +1071,28 @@ footer {
           top: 7px;
           left: -11px;
           background: white;
+        }
+        .development-header {
+          .icon-play {
+            left: 70px;
+          }
+        }
+        ul {
+          right: -120px;
+          li {
+            position: relative;
+            max-width: 400px;
+            &:before {
+              content: "\e654";
+              font-family: "iconfont" !important;
+              font-style: normal;
+              font-size: 40px;
+              position: absolute;
+              left: -34px;
+              top: -2px;
+              color: $background;
+            }
+          }
         }
       }
     }
