@@ -29,10 +29,14 @@
         },
         newInit () {
             $('.new-wrap > li').on('mouseenter', function (e) {
-                $(e.currentTarget).addClass('active')
+                if ($('.new-wrap > li').index(this) > 2) {
+                    $(e.currentTarget).addClass('active')
+                }
             })
             $('.new-wrap > li').on('mouseleave', function (e) {
-                $(e.currentTarget).removeClass('active')
+                if ($('.new-wrap > li').index(this) > 2) {
+                    $(e.currentTarget).removeClass('active')
+                }
             })
         }
 

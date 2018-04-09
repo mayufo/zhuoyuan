@@ -1095,127 +1095,6 @@ footer {
   .new-banner {
     @include clearfix;
   }
-  .new-big {
-    float: left;
-    margin-right: 58px;
-    position: relative;
-    &:hover {
-      cursor: pointer;
-    }
-    img {
-      width: 768px;
-      height: 492px;
-    }
-    .new-content {
-      position: absolute;
-      height: 185px;
-      width: 767px;
-      background: rgba(0,0,0, .75);
-      bottom: 8px;
-      left: 0;
-      padding: 26px 28px;
-      h5 {
-        padding: 4px 0 10px;
-        font-size: 18px;
-        font-weight: 700;
-        @include ellipsis;
-        max-width: 310px;
-        color: $active;
-      }
-      p {
-        line-height: 28px;
-        color: $line;
-        @include multiEllipsis(2);
-        font-size: 16px;
-
-      }
-      .new-info {
-        font-size: 14px;
-        margin-top: 10px;
-        display: flex;
-        justify-content: space-between;
-        .time {
-          color: $line;
-        }
-        .more {
-          color: $active;
-          position: relative;
-          padding-right: 14px;
-          &:before{
-            content: '';
-            background: url('../img/icon.png') -848px -118px no-repeat;
-            width: 26px;
-            height: 16px;
-            position: absolute;
-            left: -32px;
-            top: 8px;
-          }
-        }
-      }
-    }
-
-
-  }
-  .new-small {
-    margin-bottom: 15px;
-    float: left;
-    position: relative;
-    &:hover {
-      cursor: pointer;
-    }
-    img {
-      width: 374px;
-      height: 234px;
-    }
-    .new-content {
-      position: absolute;
-      height: 142px;
-      width: 373px;
-      background: rgba(0,0,0, .75);
-      bottom: 8px;
-      left: 0;
-      padding: 6px 18px;
-      h5 {
-        padding: 4px 0 6px;
-        font-size: 18px;
-        font-weight: 700;
-        @include ellipsis;
-        max-width: 310px;
-        color: $active;
-      }
-      p {
-        line-height: 26px;
-        color: $line;
-        @include multiEllipsis(2);
-        font-size: 16px;
-
-      }
-      .new-info {
-        font-size: 14px;
-        margin-top: 10px;
-        display: flex;
-        justify-content: space-between;
-        .time {
-          color: $line;
-        }
-        .more {
-          color: $active;
-          position: relative;
-          padding-right: 14px;
-          &:before{
-            content: '';
-            background: url('../img/icon.png') -848px -118px no-repeat;
-            width: 26px;
-            height: 16px;
-            position: absolute;
-            left: -32px;
-            top: 8px;
-          }
-        }
-      }
-    }
-
-  }
   .new-item {
     display: flex;
     width: 1200px;
@@ -1270,10 +1149,223 @@ footer {
         color: #9e9e9e;
       }
     }
+    &:first-child {
+      position: relative;
+      width: auto;
+      float: left;
+      margin-right: 58px;
+      a {
+        width: auto;
+      }
+      img {
+        width: 768px;
+        height: 492px;
+      }
+      .new-text {
+        position: absolute;
+        height: 185px;
+        width: 767px;
+        background: rgba(0,0,0, .75);
+        bottom: 0;
+        left: 0;
+        margin: 0;
+        padding: 26px 28px;
+        h5 {
+          padding: 4px 0 10px;
+          font-size: 18px;
+          font-weight: 700;
+          @include ellipsis;
+          color: $active;
+          max-width: 310px;
+          margin: 0;
+        }
+        p {
+          line-height: 28px;
+          color: $line;
+          @include multiEllipsis(2);
+          font-size: 16px;
+          width: auto;
+        }
+      }
+      .new-info {
+        font-size: 14px;
+        margin-top: 10px;
+        display: flex;
+        width: 767px;
+        justify-content: space-between;
+        flex-direction: row-reverse;
+        position: absolute;
+        bottom: 26px;
+        background: none;
+        padding: 0 28px;
+
+        .time {
+          color: $line;
+        }
+        .more {
+          color: $active;
+          position: relative;
+          padding-right: 14px;
+          &:before{
+            content: '';
+            background: url('../img/icon.png') -848px -118px no-repeat;
+            width: 26px;
+            height: 16px;
+            position: absolute;
+            left: -32px;
+            top: 8px;
+          }
+        }
+      }
+    }
+    &:nth-child(2) {
+      position: relative;
+      width: auto;
+      float: left;
+      margin-bottom: 25px;
+
+      a {
+        width: auto;
+      }
+      img {
+        width: 374px;
+        height: 234px;
+      }
+      .new-text {
+        position: absolute;
+        height: 142px;
+        width: 373px;
+        background: rgba(0,0,0, .75);
+        bottom: 0;
+        left: 0;
+        margin: 0;
+        padding: 6px 18px;
+        h5 {
+          margin: 0;
+          padding: 4px 0 6px;
+          font-size: 18px;
+          font-weight: 700;
+          @include ellipsis;
+          max-width: 310px;
+          color: $active;
+
+        }
+        p {
+          line-height: 28px;
+          color: $line;
+          @include multiEllipsis(2);
+          font-size: 16px;
+          width: auto;
+        }
+      }
+      .new-info {
+        font-size: 14px;
+        margin-top: 10px;
+        display: flex;
+        width: 373px;
+        justify-content: space-between;
+        flex-direction: row-reverse;
+        position: absolute;
+        bottom: 14px;
+        background: none;
+        padding: 0 16px;
+
+        .time {
+          color: $line;
+        }
+        .more {
+          color: $active;
+          position: relative;
+          padding-right: 14px;
+          &:before{
+            content: '';
+            background: url('../img/icon.png') -848px -118px no-repeat;
+            width: 26px;
+            height: 16px;
+            position: absolute;
+            left: -32px;
+            top: 8px;
+          }
+        }
+      }
+    }
+    &:nth-child(3) {
+      position: relative;
+      width: auto;
+      float: left;
+      a {
+        width: auto;
+      }
+      img {
+        width: 374px;
+        height: 234px;
+      }
+      .new-text {
+        position: absolute;
+        height: 142px;
+        width: 373px;
+        background: rgba(0,0,0, .75);
+        bottom: 0;
+        left: 0;
+        margin: 0;
+        padding: 6px 18px;
+        h5 {
+          margin: 0;
+          padding: 4px 0 6px;
+          font-size: 18px;
+          font-weight: 700;
+          @include ellipsis;
+          max-width: 310px;
+          color: $active;
+
+        }
+        p {
+          line-height: 28px;
+          color: $line;
+          @include multiEllipsis(2);
+          font-size: 16px;
+          width: auto;
+        }
+      }
+      .new-info {
+        font-size: 14px;
+        margin-top: 10px;
+        display: flex;
+        width: 373px;
+        justify-content: space-between;
+        flex-direction: row-reverse;
+        position: absolute;
+        bottom: 14px;
+        background: none;
+        padding: 0 16px;
+
+        .time {
+          color: $line;
+        }
+        .more {
+          color: $active;
+          position: relative;
+          padding-right: 14px;
+          &:before{
+            content: '';
+            background: url('../img/icon.png') -848px -118px no-repeat;
+            width: 26px;
+            height: 16px;
+            position: absolute;
+            left: -32px;
+            top: 8px;
+          }
+        }
+      }
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
+
   }
   .new-wrap {
     .active {
-      cursor: pointer;
       .new-text {
         h5 {
           color: $active;
