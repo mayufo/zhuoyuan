@@ -1030,6 +1030,13 @@ footer {
   .new-page .new-item:hover {
     cursor: pointer; }
 
+.new-page .new-wrap:before, .new-page .new-wrap:after {
+  content: " ";
+  display: table; }
+
+.new-page .new-wrap:after {
+  clear: both; }
+
 .new-page .new-wrap .active .new-text h5 {
   color: #06bf75; }
 

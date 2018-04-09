@@ -1365,6 +1365,7 @@ footer {
 
   }
   .new-wrap {
+    @include clearfix;
     .active {
       .new-text {
         h5 {
