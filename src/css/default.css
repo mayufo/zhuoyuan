@@ -687,8 +687,9 @@ footer {
       position: relative;
       top: -26px; }
       .development .page-content .development-item ul li {
-        font-size: 16px;
-        line-height: 30px; }
+        font-size: 18px;
+        line-height: 34px;
+        color: #4e4e4e; }
     .development .page-content .development-item:nth-child(even) {
       float: left;
       text-align: right;
