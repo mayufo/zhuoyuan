@@ -1115,6 +1115,77 @@ footer {
   position: relative;
   top: -22px; }
 
+.recruitment-page .recruitment-list {
+  padding: 0 30px; }
+  .recruitment-page .recruitment-list li {
+    border-bottom: 1px solid #cccccc;
+    padding-bottom: 50px; }
+  .recruitment-page .recruitment-list .recruitment-item-header {
+    margin: 50px 0;
+    display: flex;
+    font-size: 18px; }
+    .recruitment-page .recruitment-list .recruitment-item-header h5 {
+      font-size: 20px;
+      flex-grow: 2; }
+    .recruitment-page .recruitment-list .recruitment-item-header .describe-open {
+      color: #06bf75;
+      position: relative;
+      cursor: pointer;
+      display: none; }
+      .recruitment-page .recruitment-list .recruitment-item-header .describe-open:before {
+        content: '';
+        background: url("../img/icon.png") -1180px -118px no-repeat;
+        position: absolute;
+        height: 16px;
+        width: 17px;
+        left: -20px;
+        top: 6px; }
+    .recruitment-page .recruitment-list .recruitment-item-header .describe-close {
+      color: #06bf75;
+      position: relative;
+      cursor: pointer; }
+      .recruitment-page .recruitment-list .recruitment-item-header .describe-close:before {
+        content: '';
+        background: url("../img/icon.png") -1180px -118px no-repeat;
+        position: absolute;
+        height: 16px;
+        width: 17px;
+        left: -20px;
+        top: 6px;
+        transform: rotate(180deg); }
+    .recruitment-page .recruitment-list .recruitment-item-header .apply {
+      border-radius: 4px;
+      background: #06bf75;
+      padding: 6px 18px 6px 40px;
+      display: inline-block;
+      position: relative;
+      top: -6px;
+      color: white;
+      font-size: 18px;
+      cursor: pointer; }
+      .recruitment-page .recruitment-list .recruitment-item-header .apply:before {
+        content: '';
+        position: absolute;
+        background: url("../img/icon.png") -1260px -118px no-repeat;
+        height: 20px;
+        width: 20px;
+        top: 11px;
+        left: 17px; }
+    .recruitment-page .recruitment-list .recruitment-item-header div {
+      flex-grow: 1;
+      color: #999999; }
+  .recruitment-page .recruitment-list .recruitment-content-detail {
+    color: #333333;
+    display: none; }
+  .recruitment-page .recruitment-list .recruitment-content-brief {
+    color: #666666;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+    word-break: break-all; }
+
 .paging {
   display: flex;
   justify-content: center; }

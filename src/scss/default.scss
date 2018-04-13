@@ -1359,7 +1359,85 @@ footer {
   }
 }
 .recruitment-page {
+  .recruitment-list {
+    padding: 0 30px;
+    li {
+      border-bottom: 1px solid $line;
+      padding-bottom: 50px;
+    }
+    .recruitment-item-header {
+      margin: 50px 0;
+      display: flex;
+      font-size: 18px;
+      h5 {
+        font-size: 20px;
+        flex-grow: 2;
+      }
+      .describe-open {
+        color: $active;
+        position: relative;
+        cursor: pointer;
+        display: none;
+        &:before {
+          content: '';
+          background: url("../img/icon.png") -1180px -118px no-repeat;
+          position: absolute;
+          height: 16px;
+          width: 17px;
+          left: -20px;
+          top: 6px;
+        }
+      }
+      .describe-close {
+        color: $active;
+        position: relative;
+        cursor: pointer;
+        &:before {
+          content: '';
+          background: url("../img/icon.png") -1180px -118px no-repeat;
+          position: absolute;
+          height: 16px;
+          width: 17px;
+          left: -20px;
+          top: 6px;
+          transform: rotate(180deg);
+        }
+      }
+      .apply {
+        border-radius: 4px;
+        background: $active;
+        padding: 6px 18px 6px 40px;
+        display: inline-block;
+        position: relative;
+        top: -6px;
+        color: white;
+        font-size: 18px;
+        cursor: pointer;
+        &:before {
+          content: '';
+          position: absolute;
+          background: url("../img/icon.png") -1260px -118px no-repeat;
+          height: 20px;
+          width: 20px;
+          top: 11px;
+          left: 17px;
+        }
+      }
+      div {
+        flex-grow: 1;
+        color: $background;
+      }
+    }
+    .recruitment-content-detail    {
+      color: $text;
+      display: none;
+    }
+    .recruitment-content-brief {
+      color: $text-light;
+      @include multiEllipsis(3);
+    }
 
+  }
 }
 // 分页
 .paging {
