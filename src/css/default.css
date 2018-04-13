@@ -1120,6 +1120,8 @@ footer {
   .recruitment-page .recruitment-list li {
     border-bottom: 1px solid #cccccc;
     padding-bottom: 50px; }
+    .recruitment-page .recruitment-list li:first-child .recruitment-item-header {
+      margin-top: 0; }
   .recruitment-page .recruitment-list .recruitment-item-header {
     margin: 50px 0;
     display: flex;

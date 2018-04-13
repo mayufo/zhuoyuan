@@ -1364,6 +1364,11 @@ footer {
     li {
       border-bottom: 1px solid $line;
       padding-bottom: 50px;
+      &:first-child {
+        .recruitment-item-header {
+          margin-top: 0;
+        }
+      }
     }
     .recruitment-item-header {
       margin: 50px 0;
