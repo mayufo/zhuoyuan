@@ -70,6 +70,7 @@
                 let formData = new FormData()
                 let file = $(e.currentTarget).find('input')[0].files[0]
                 formData.append('file', file)
+                formData.append('recruit', $(e.currentTarget).attr('recruit'))
 
                 $.ajax({
                     url: '/upload', // 地址
