@@ -69,11 +69,12 @@
             $('.apply').on('change', (e) => {
                 let formData = new FormData()
                 let file = $(e.currentTarget).find('input').prop('files')
+                formData.append('file', file)
                 $.ajax({
                     url: '/upload', // 地址
                     type: 'POST',
                     cache: false,
-                    data: formData.append('file', file),
+                    data: formData,
                     processData: false,
                     contentType: false
                 }).done(function(res) {
