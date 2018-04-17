@@ -50,7 +50,6 @@
             $('.development .page-content').css('height', $('.page-content').height() + 20)
         },
         recruitmentInit () {
-            $('.recruitment-content-brief').html($('.recruitment-content-detail').html().replace(/<[^>]+>/g, ''))
             for (let i =0; i < $('.recruitment-content-brief').length; i++) {
                 $('.recruitment-content-brief').eq(i).html($('.recruitment-content-detail').eq(i).html().replace(/<[^>]+>/g, ''))
             }
