@@ -66,6 +66,32 @@
                 $(e.currentTarget).parent().parent().find('.recruitment-content-detail').hide()
 
             })
+            $('.apply').on('change', (e) => {
+                let formData = new FormData()
+                let file = $(e.currentTarget).find('input').prop('files')
+                $.ajax({
+                    url: '/upload', // 地址
+                    type: 'POST',
+                    cache: false,
+                    data: formData.append('file', file),
+                    processData: false,
+                    contentType: false
+                }).done(function(res) {
+                    spop({
+                        template: '上传成功',
+                        style: 'success',
+                        autoclose: 5000,
+                        position  : 'top-center'
+                    });
+                }).fail(function(res) {
+                    spop({
+                        template: '上传失败',
+                        style: 'error',
+                        position  : 'top-center'
+                    });
+                });
+
+            })
         }
 
 
