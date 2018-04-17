@@ -51,15 +51,20 @@
         },
         recruitmentInit () {
             $('.recruitment-content-brief').html($('.recruitment-content-detail').html().replace(/<[^>]+>/g, ''))
+            for (let i =0; i < $('.recruitment-content-brief').length; i++) {
+                $('.recruitment-content-brief').eq(i).html($('.recruitment-content-detail').eq(i).html().replace(/<[^>]+>/g, ''))
+            }
+
             $('.recruitment-list').on('click', '.describe-close ', (e) => {
-                $(e.currentTarget).hide().parent().find('.describe-open').show()
-                $(e.currentTarget).hide().parent().parent().find('.recruitment-content-detail').show()
-                $(e.currentTarget).hide().parent().parent().find('.recruitment-content-brief').hide()
+                $(e.currentTarget).hide().siblings('.describe-open').show()
+                $(e.currentTarget).parent().parent().find('.recruitment-content-detail').show()
+                $(e.currentTarget).parent().parent().find('.recruitment-content-brief').hide()
+
             })
             $('.recruitment-list').on('click', '.describe-open ', (e) => {
-                $(e.currentTarget).hide().parent().find('.describe-close').show()
-                $(e.currentTarget).hide().parent().parent().find('.recruitment-content-brief').show()
-                $(e.currentTarget).hide().parent().parent().find('.recruitment-content-detail').hide()
+                $(e.currentTarget).hide().siblings('.describe-close').show()
+                $(e.currentTarget).parent().parent().find('.recruitment-content-brief').show()
+                $(e.currentTarget).parent().parent().find('.recruitment-content-detail').hide()
 
             })
         }
