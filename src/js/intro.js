@@ -14,17 +14,23 @@
             this.developmentInit()
             // 招聘初始化
             this.recruitmentInit()
+            // 滚动
+            this.scrollInit()
         },
         navInit () {
             // 当有子菜单的时候显示icon
             $('.nav-item').has('.children-list').find('i').show()
 
-            $('.nav > li').on('mouseenter', function (e) {
+            $('.nav > li').on('click', function (e) {
+                $(e.currentTarget).siblings().removeClass('active')
                 $(e.currentTarget).addClass('active')
-            })
-            $('.nav > li').on('mouseleave', function (e) {
-                $(e.currentTarget).removeClass('active')
-            })
+                let el = $(e.currentTarget)
+                $(document).one("click", function(){
+                    el.removeClass('active');
+                });
+
+                e.stopPropagation();
+            });
         },
         applyInit () {
             $('.apply-wrap > li').on('mouseenter', function (e) {
@@ -66,35 +72,6 @@
                 $(e.currentTarget).parent().parent().find('.recruitment-content-detail').hide()
 
             })
-            // $('.apply').on('change', (e) => {
-            //     let formData = new FormData()
-            //     let file = $(e.currentTarget).find('input')[0].files[0]
-            //     formData.append('file', file)
-            //     formData.append('recruit', $(e.currentTarget).attr('recruit'))
-            //
-            //     $.ajax({
-            //         url: '/upload', // 地址
-            //         type: 'POST',
-            //         cache: false,
-            //         data: formData,
-            //         processData: false,
-            //         contentType: false
-            //     }).done(function(res) {
-            //         spop({
-            //             template: '上传成功',
-            //             style: 'success',
-            //             autoclose: 5000,
-            //             position  : 'top-center'
-            //         });
-            //     }).fail(function(res) {
-            //         spop({
-            //             template: '上传失败',
-            //             style: 'error',
-            //             position  : 'top-center'
-            //         });
-            //     });
-            //
-            // })
             $('.apply').on('click', (e) => {
                 $('#resume h4').html(`申请${$(e.currentTarget).parent().find('h5').html()}岗位`)
                 $('#resume').attr('recruit', $(e.currentTarget).attr('recruit'))
@@ -161,7 +138,16 @@
                 }
 
             })
-        }
+        },
+        scrollInit() {
+            window.onscroll = () => {
+                if (window.scrollY > 30) {
+                    $('nav').css({'position': 'fixed', 'top': '0'})
+                } else {
+                    $('nav').css({'position': 'absolute', 'top': '30px'})
+                }
+            }
+        },
     }
     controller.init()
 }
