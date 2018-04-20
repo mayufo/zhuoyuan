@@ -178,16 +178,19 @@ section {
       align-items: center;
 
       .nav-item {
-        padding: 0 10px;
+        padding: 0 18px 0 10px;
         line-height: 120px;
         position: relative;
-
+        cursor: pointer;
         > a {
           padding-bottom: 4px;
           color: $text;
           i {
             font-size: 10px;
             display: none;
+            position: absolute;
+            top: 1px;
+            right: 6px;
           }
         }
 
@@ -219,20 +222,21 @@ section {
             }
           }
         }
+        &:hover {
+          > a {
+            color: white;
+            font-weight: 700;
+            cursor: pointer;
+            i {
+              color: white;
+            }
+          }
+        }
       }
 
       .active .children-list {
         display: block;
         animation: childNav .3s;
-      }
-
-      .active > a {
-        color: white;
-        font-weight: 700;
-        cursor: pointer;
-      }
-      .active i {
-        color: white;
       }
     }
     .language {

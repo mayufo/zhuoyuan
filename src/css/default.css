@@ -111,15 +111,19 @@ section {
       flex-grow: 1;
       align-items: center; }
       .nav-wrap nav .nav .nav-item {
-        padding: 0 10px;
+        padding: 0 18px 0 10px;
         line-height: 120px;
-        position: relative; }
+        position: relative;
+        cursor: pointer; }
         .nav-wrap nav .nav .nav-item > a {
           padding-bottom: 4px;
           color: #333333; }
           .nav-wrap nav .nav .nav-item > a i {
             font-size: 10px;
-            display: none; }
+            display: none;
+            position: absolute;
+            top: 1px;
+            right: 6px; }
         .nav-wrap nav .nav .nav-item .children-list {
           display: none;
           position: absolute;
@@ -139,15 +143,15 @@ section {
             cursor: pointer; }
             .nav-wrap nav .nav .nav-item .children-list > li > a:hover {
               color: #06bf75; }
+        .nav-wrap nav .nav .nav-item:hover > a {
+          color: white;
+          font-weight: 700;
+          cursor: pointer; }
+          .nav-wrap nav .nav .nav-item:hover > a i {
+            color: white; }
       .nav-wrap nav .nav .active .children-list {
         display: block;
         animation: childNav .3s; }
-      .nav-wrap nav .nav .active > a {
-        color: white;
-        font-weight: 700;
-        cursor: pointer; }
-      .nav-wrap nav .nav .active i {
-        color: white; }
     .nav-wrap nav .language {
       position: absolute;
       right: 20px;

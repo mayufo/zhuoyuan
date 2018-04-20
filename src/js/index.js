@@ -14,12 +14,19 @@
             // 当有子菜单的时候显示icon
             $('.nav-item').has('.children-list').find('i').show()
 
-            $('.nav > li').on('mouseenter', function (e) {
+            $('.nav > li').on('click', function (e) {
+                $(e.currentTarget).siblings().removeClass('active')
                 $(e.currentTarget).addClass('active')
-            })
-            $('.nav > li').on('mouseleave', function (e) {
-                $(e.currentTarget).removeClass('active')
-            })
+                let el = $(e.currentTarget)
+                $(document).one("click", function(){
+                    el.removeClass('active');
+                });
+
+                e.stopPropagation();
+            });
+            // $('.nav > li').on('mouseleave', function (e) {
+            //     $(e.currentTarget).removeClass('active')
+            // })
         },
         slideInit () {
             var swiper = new Swiper('.swiper-container', {
@@ -60,6 +67,11 @@
             this.scrollFn()
             window.onscroll = () => {
                 this.scrollFn()
+                if (window.scrollY > 30) {
+                    $('nav').css({'position': 'fixed', 'top': '0'})
+                } else {
+                    $('nav').css({'position': 'absolute', 'top': '30px'})
+                }
             }
         },
         scrollFn () {
