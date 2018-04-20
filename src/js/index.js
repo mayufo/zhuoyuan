@@ -33,7 +33,11 @@
                 navigation: {
                     nextEl: '.swiper-button-next',
                     prevEl: '.swiper-button-prev',
-                }
+                },
+                autoplay: {
+                    delay: 2000,
+                },
+                loop : true
             });
         },
         featureInit () {
@@ -63,7 +67,7 @@
             if (scroll) {
                 let index = 0;
                 for (let i = 0, item = $('[data-scroll]'); i < item.length; i++) {
-                    if (Math.abs(item[i].offsetTop - window.scrollY) < Math.abs(item[index].offsetTop - window.scrollY)) {
+                    if (Math.abs(item[i].offsetTop - window.scrollY) < Math.abs(item[index].offsetTop - window.scrollY - 350)) {
                         index = i;
                     }
                 }
