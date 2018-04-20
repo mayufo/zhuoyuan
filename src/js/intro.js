@@ -66,33 +66,99 @@
                 $(e.currentTarget).parent().parent().find('.recruitment-content-detail').hide()
 
             })
-            $('.apply').on('change', (e) => {
-                let formData = new FormData()
-                let file = $(e.currentTarget).find('input')[0].files[0]
-                formData.append('file', file)
-                formData.append('recruit', $(e.currentTarget).attr('recruit'))
-
-                $.ajax({
-                    url: '/upload', // 地址
-                    type: 'POST',
-                    cache: false,
-                    data: formData,
-                    processData: false,
-                    contentType: false
-                }).done(function(res) {
-                    spop({
-                        template: '上传成功',
-                        style: 'success',
-                        autoclose: 5000,
-                        position  : 'top-center'
+            // $('.apply').on('change', (e) => {
+            //     let formData = new FormData()
+            //     let file = $(e.currentTarget).find('input')[0].files[0]
+            //     formData.append('file', file)
+            //     formData.append('recruit', $(e.currentTarget).attr('recruit'))
+            //
+            //     $.ajax({
+            //         url: '/upload', // 地址
+            //         type: 'POST',
+            //         cache: false,
+            //         data: formData,
+            //         processData: false,
+            //         contentType: false
+            //     }).done(function(res) {
+            //         spop({
+            //             template: '上传成功',
+            //             style: 'success',
+            //             autoclose: 5000,
+            //             position  : 'top-center'
+            //         });
+            //     }).fail(function(res) {
+            //         spop({
+            //             template: '上传失败',
+            //             style: 'error',
+            //             position  : 'top-center'
+            //         });
+            //     });
+            //
+            // })
+            $('.apply').on('click', (e) => {
+                $('#resume h4').html(`申请${$(e.currentTarget).parent().find('h5').html()}岗位`)
+                $('#resume').attr('recruit', $(e.currentTarget).attr('recruit'))
+            })
+            // 验证码
+            $('.verify').on('input propertychange', (e) => {
+                console.log($(e.currentTarget).val())
+                if ($(e.currentTarget).val().length === 4) {
+                    let formData = new FormData()
+                    formData.append('captcha', $(e.currentTarget).val())
+                    $.ajax({
+                        url: '/captcha.php', // 地址
+                        type: 'POST',
+                        cache: false,
+                        data: formData,
+                        processData: false,
+                        contentType: false
+                    }).done(function(res) {
+                       $('#resume').find('.btn-primary').removeClass('disabled')
+                    }).fail(function(res) {
+                        spop({
+                            template: '验证码错误',
+                            style: 'error',
+                            position  : 'top-center'
+                        });
                     });
-                }).fail(function(res) {
+                }
+            })
+            // 提交
+            $('#resume .btn-primary').on('click', (e) => {
+                let formData = new FormData()
+                let file = $('#resume').find('input')[0].files[0]
+                if (!file) {
                     spop({
-                        template: '上传失败',
+                        template: '请上传文件',
                         style: 'error',
                         position  : 'top-center'
                     });
-                });
+                } else {
+                    formData.append('file', file)
+                    formData.append('recruit',  $('#resume').attr('recruit'))
+
+                    $.ajax({
+                        url: '/upload', // 地址
+                        type: 'POST',
+                        cache: false,
+                        data: formData,
+                        processData: false,
+                        contentType: false
+                    }).done(function(res) {
+                        spop({
+                            template: '上传成功',
+                            style: 'success',
+                            autoclose: 5000,
+                            position  : 'top-center'
+                        });
+                    }).fail(function(res) {
+                        spop({
+                            template: '上传失败',
+                            style: 'error',
+                            position  : 'top-center'
+                        });
+                    });
+                }
 
             })
         }

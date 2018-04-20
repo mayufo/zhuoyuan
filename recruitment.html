@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="//at.alicdn.com/t/font_614202_x2w82ah0yb65hfr.css">
     <link rel="stylesheet" href="src/css/markdown.css">
     <link rel="stylesheet" href="src/css/spop.css">
+    <link rel="stylesheet" href="src/css/bootstarp.css">
 
 </head>
 <body>
@@ -100,9 +101,8 @@
                         <div class="describe-close">简要描述</div>
                         <div class="needNumber">需10人 </div>
                         <div class="time">2018.3.16</div>
-                        <a class="apply" recruit="11">职位申请
-                            <input type="file" accept=".doc, .docx, .pdf">
-                        </a>
+                        <a class="apply" recruit="11" data-toggle="modal" data-target="#resume">职位申请</a>
+
                     </div>
                     <!--详细内容-->
                     <div class="recruitment-content-detail markdown-body">
@@ -124,8 +124,8 @@
                         <div class="describe-close">简要描述</div>
                         <div class="needNumber">需10人 </div>
                         <div class="time">2018.3.16</div>
-                        <a class="apply">职位申请
-                            <input type="file" class="upload" accept=".doc, .docx, .pdf">
+                        <a class="apply" recruit="12" data-toggle="modal" data-target="#resume">职位申请
+                            <!--<input type="file" class="upload" accept=".doc, .docx, .pdf">-->
                         </a>
                     </div>
                     <!--详细内容-->
@@ -170,9 +170,43 @@
             </div>
         </div>
     </footer>
+    <!-- 模态框（Modal） -->
+    <div class="modal fade" id="resume" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                        &times;
+                    </button>
+                    <h4 class="modal-title" >
+                        模态框（Modal）标题
+                    </h4>
+                </div>
+                <div class="modal-body">
+                    <!--在这里添加一些文本-->
+                    <input class="upload" type="file" accept=".doc, .docx, .pdf">
+                    <div class="form-line">
+                        验证码 
+                        <input type="text" class="verify">
+                        <img src="http://web.sundy.site/captcha.php" alt="">
+                    </div>
+
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">取消
+                    </button>
+                    <button type="button" class="btn btn-primary disabled">
+                        提交
+                    </button>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal -->
+    </div>
 </main>
 <script src="src/js/jquery.min.js"></script>
 <script src="src/js/spop.min.js"></script>
 <script src="src/js/intro.js"></script>
+<script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </body>
 </html>

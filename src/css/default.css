@@ -1175,14 +1175,8 @@ footer {
       color: white;
       font-size: 18px;
       cursor: pointer;
-      overflow: hidden; }
-      .recruitment-page .recruitment-list .recruitment-item-header .apply input {
-        position: absolute;
-        font-size: 100px;
-        right: 0;
-        top: 0;
-        opacity: 0;
-        cursor: pointer; }
+      overflow: hidden;
+      text-decoration: none; }
       .recruitment-page .recruitment-list .recruitment-item-header .apply:before {
         content: '';
         position: absolute;
@@ -1230,3 +1224,18 @@ footer {
     .paging .page .active a {
       cursor: auto;
       color: #333333; }
+
+#resume .modal-body {
+  font-size: 12px; }
+  #resume .modal-body input {
+    font-size: inherit;
+    vertical-align: top; }
+  #resume .modal-body .form-line {
+    font-size: inherit;
+    margin-top: 8px; }
+    #resume .modal-body .form-line input {
+      height: 25px; }
+
+#resume .btn-primary {
+  background: #06bf75;
+  border: none; }
