@@ -16,7 +16,7 @@
 
             $('.nav > li').on('click', function (e) {
                 $(e.currentTarget).siblings().removeClass('active')
-                $(e.currentTarget).addClass('active')
+                $(e.currentTarget).toggleClass('active')
                 let el = $(e.currentTarget)
                 $(document).one("click", function(){
                     el.removeClass('active');
@@ -24,9 +24,9 @@
 
                 e.stopPropagation();
             });
-            // $('.nav > li').on('mouseleave', function (e) {
-            //     $(e.currentTarget).removeClass('active')
-            // })
+            $('.nav > li').on('mouseleave', function (e) {
+                $(e.currentTarget).removeClass('active')
+            })
         },
         slideInit () {
             var swiper = new Swiper('.swiper-container', {
