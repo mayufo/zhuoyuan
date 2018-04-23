@@ -149,6 +149,14 @@ section {
   img {
     width: 100%;
   }
+  .nav-background {
+    background: $active;
+    width: 100vw;
+    height: 100px;
+    z-index: 2;
+    position: fixed;
+    display: none;
+  }
   //导航
   nav {
     animation: down ease-out 0.8s;
@@ -261,6 +269,7 @@ section {
 
     }
   }
+
   //幻灯
   .swiper-container {
     width: 100%;
@@ -332,6 +341,21 @@ section {
       &:hover {
         background: url("../img/icon.png")  -386px -116px no-repeat;
       }
+    }
+  }
+}
+.suspension {
+  nav {
+    position: fixed;
+    top: 0;
+    .header {
+      height: 100px;
+    }
+    .nav .nav-item {
+      line-height: 100px;
+    }
+    .language {
+      top: 38px;
     }
   }
 }

@@ -81,6 +81,13 @@ section {
   position: relative; }
   .nav-wrap img {
     width: 100%; }
+  .nav-wrap .nav-background {
+    background: #06bf75;
+    width: 100vw;
+    height: 100px;
+    z-index: 2;
+    position: fixed;
+    display: none; }
   .nav-wrap nav {
     animation: down ease-out 0.8s;
     animation-iteration-count: 1;
@@ -230,6 +237,16 @@ section {
       left: 0; }
       .nav-wrap .swiper-container .swiper-button-prev:hover {
         background: url("../img/icon.png") -386px -116px no-repeat; }
+
+.suspension nav {
+  position: fixed;
+  top: 0; }
+  .suspension nav .header {
+    height: 100px; }
+  .suspension nav .nav .nav-item {
+    line-height: 100px; }
+  .suspension nav .language {
+    top: 38px; }
 
 .feature ul {
   display: flex;

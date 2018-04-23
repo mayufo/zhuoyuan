@@ -64,14 +64,28 @@
             })
         },
         scrollInit() {
-            this.scrollFn()
+            if (window.scrollY === 0) {
+                this.scrollFn()
+            } else {
+                for (let i = 0, item = $('[data-scroll]'); i < item.length; i++) {
+                    item.eq(i).addClass('scroll')
+                }
+            }
+            this.scrollNav()
+            $('.nav-wrap').prepend($('<div class="nav-background"></div>'))
             window.onscroll = () => {
                 this.scrollFn()
-                if (window.scrollY > 30) {
-                    $('nav').css({'position': 'fixed', 'top': '0'})
-                } else {
-                    $('nav').css({'position': 'absolute', 'top': '30px'})
-                }
+                this.scrollNav()
+            }
+        },
+        scrollNav () {
+            if (window.scrollY > 30) {
+                $('.nav-wrap').addClass('suspension')
+                $('.nav-background').show()
+            } else {
+                $('.nav-wrap').removeClass('suspension')
+                $('.nav-background').hide()
+
             }
         },
         scrollFn () {
