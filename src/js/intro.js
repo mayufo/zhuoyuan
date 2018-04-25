@@ -143,6 +143,7 @@
             })
         },
         scrollInit() {
+            this.scrollNav()
             window.onscroll = () => {
                 this.scrollNav()
             }
