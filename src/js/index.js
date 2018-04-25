@@ -72,14 +72,14 @@
                 }
             }
             this.scrollNav()
-
+            $('.nav-wrap').prepend($('<div class="nav-background"></div>'))
             window.onscroll = () => {
                 this.scrollFn()
                 this.scrollNav()
+
             }
         },
         scrollNav () {
-            $('.nav-wrap').prepend($('<div class="nav-background"></div>'))
             if (window.scrollY > 30) {
                 $('.nav-wrap').addClass('suspension')
                 $('.nav-background').show()
