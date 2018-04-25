@@ -405,6 +405,7 @@ section {
           line-height: 25px;
           color: inherit;
           @include multiEllipsis(3);
+          max-height: 93px;
         }
       }
     }
@@ -564,6 +565,7 @@ section {
         color: $text-light;
         @include multiEllipsis(3);
         font-size: 16px;
+        max-height: 80px;
       }
       .new-info {
         font-size: 14px;
@@ -1109,6 +1111,7 @@ footer {
         @include multiEllipsis(2);
         width: 620px;
         color: #858585;
+        height: 52px;
       }
     }
     .new-info {
@@ -1118,6 +1121,7 @@ footer {
       justify-content: center;
       background: #e6e6e6;
       text-align: center;
+      left: 0;
       .more {
         color: $active;
         position: relative;
@@ -1480,6 +1484,7 @@ footer {
     .recruitment-content-brief {
       color: $text-light;
       @include multiEllipsis(3);
+      max-height: 84px;
     }
 
   }
