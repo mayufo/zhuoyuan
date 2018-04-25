@@ -144,11 +144,18 @@
         },
         scrollInit() {
             window.onscroll = () => {
-                if (window.scrollY > 30) {
-                    $('nav').css({'position': 'fixed', 'top': '0'})
-                } else {
-                    $('nav').css({'position': 'absolute', 'top': '30px'})
-                }
+                this.scrollNav()
+            }
+        },
+        scrollNav () {
+            $('.nav-wrap').prepend($('<div class="nav-background"></div>'))
+            if (window.scrollY > 30) {
+                $('.nav-wrap').addClass('suspension')
+                $('.nav-background').show()
+            } else {
+                $('.nav-wrap').removeClass('suspension')
+                $('.nav-background').hide()
+
             }
         },
     }
