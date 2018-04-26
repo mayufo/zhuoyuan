@@ -144,14 +144,14 @@ section {
 
 //导航&幻灯部分
 .nav-wrap {
-  width: 100vw;
+  width: 100%;
   position: relative;
   img {
     width: 100%;
   }
   .nav-background {
     background: $active;
-    width: 100vw;
+    width: 100%;
     height: 100px;
     z-index: 2;
     position: fixed;
@@ -512,7 +512,7 @@ section {
 .introduction {
   .introduction-content {
     background: url("../img/introduction.jpg") 50% 50% no-repeat;
-    width: 100vw;
+    width: 100%;
     height: 630px;
     background-size: cover;
     position: relative;
@@ -597,7 +597,7 @@ section {
 footer {
   margin-top: 50px;
   height: 316px;
-  width: 100vw;
+  width: 100%;
   background-size: cover;
   background: url("../img/footer.jpg") 50% 50%;
   .footer-wrap {
@@ -845,7 +845,7 @@ footer {
       h5 {
         color: white;
         font-size: 38px;
-        padding-top: 65px;
+        padding-top: 35px;
         padding-bottom: 98px;
       }
       p {
