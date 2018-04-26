@@ -121,7 +121,10 @@ section {
         padding: 0 18px 0 10px;
         line-height: 120px;
         position: relative;
-        cursor: pointer; }
+        cursor: pointer;
+        width: 92px; }
+        .nav-wrap nav .nav .nav-item:first-child {
+          width: 62px; }
         .nav-wrap nav .nav .nav-item > a {
           padding-bottom: 4px;
           color: #333333; }
@@ -377,7 +380,8 @@ section {
   background-size: cover;
   position: relative; }
   .introduction .introduction-content p {
-    width: 1200px;
+    width: 50%;
+    max-height: 84px;
     color: white;
     line-height: 28px;
     display: -webkit-box;
@@ -467,7 +471,8 @@ footer {
     display: flex;
     justify-content: space-between; }
   footer .footer-content {
-    color: #999999; }
+    color: #999999;
+    width: 360px; }
     footer .footer-content h4 {
       color: inherit;
       font-size: 18px;

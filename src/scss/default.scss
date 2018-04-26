@@ -190,6 +190,10 @@ section {
         line-height: 120px;
         position: relative;
         cursor: pointer;
+        width: 92px;
+        &:first-child {
+          width: 62px;
+        }
         > a {
           padding-bottom: 4px;
           color: $text;
@@ -517,7 +521,8 @@ section {
     background-size: cover;
     position: relative;
     p {
-      width: 1200px;
+      width: 50%;
+      max-height: 84px;
       color: white;
       line-height: 28px;
       @include multiEllipsis(3);
@@ -610,6 +615,7 @@ footer {
   }
   .footer-content {
     color: $background;
+    width: 360px;
     h4 {
       color: inherit;
       font-size: 18px;
