@@ -653,7 +653,8 @@ footer {
   .intro .intro-item2 img {
     position: absolute;
     z-index: -1;
-    max-width: 680px; }
+    max-width: 680px;
+    top: 30px; }
   .intro .intro-item2 .content {
     max-width: 484px;
     float: right; }
