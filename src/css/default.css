@@ -412,7 +412,6 @@ section {
   .new ul .new-item {
     display: flex; }
     .new ul .new-item img {
-      width: 200px;
       height: 150px; }
     .new ul .new-item:hover {
       cursor: pointer; }
