@@ -277,7 +277,7 @@ section {
   //幻灯
   .swiper-container {
     width: 100%;
-    height: 840px;
+    height: 540px;
     .swiper-slide {
       text-align: center;
       font-size: 18px;
@@ -608,7 +608,7 @@ footer {
   .footer-wrap {
     max-width: 1200px;
     width: 1200px;
-    padding: 64px 0 38px;
+    padding: 64px 0 0;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
@@ -750,7 +750,7 @@ footer {
   .bread-nav {
     margin: 0 auto;
     width: 1200px;
-    padding: 30px;
+    padding: 30px 20px;
     box-shadow: 0 0 7px -1px rgba(0,0,0,0.45);
     position: relative;
     top: -40px;
@@ -770,18 +770,17 @@ footer {
       }
     }
     .next {
-      float: right;
       width: 260px;
       line-height: 83px;
       background: $active;
       position: absolute;
       right: 0;
       top: 0;
-      padding: 0 25px;
+      padding: 0 0 0 25px;
 
       .next-title {
         padding-left: 56px;
-        max-width: 145px;
+        max-width: 170px;
         @include ellipsis;
         position: absolute;
         display: inline-block;
@@ -805,7 +804,7 @@ footer {
   }
   .page-content {
     max-width: 1200px;
-    margin: 40px auto;
+    margin: 0px auto 40px;
     line-height: 28px;
     @include clearfix;
   }
@@ -827,8 +826,7 @@ footer {
     img {
       position: absolute;
       z-index: -1;
-      top: -24px;
-      left: -5px;
+      max-width: 680px;
     }
     .content {
       max-width: 484px;
@@ -851,7 +849,7 @@ footer {
       h5 {
         color: white;
         font-size: 38px;
-        padding-top: 35px;
+        padding-top: 65px;
         padding-bottom: 98px;
       }
       p {
@@ -1404,6 +1402,7 @@ footer {
     top: -22px;
   }
 }
+// 招聘
 .recruitment-page {
   .recruitment-list {
     padding: 0 30px;
@@ -1491,8 +1490,56 @@ footer {
       color: $text-light;
       @include multiEllipsis(3);
       max-height: 84px;
+      width: 46%;
     }
 
+  }
+}
+.product-page {
+  .product-content {
+    margin-top: 0!important;
+    width: 872px;
+    border-radius: 6px;
+    border: 6px solid #06bf75;
+    padding: 52px 100px 52px 140px;
+    position: relative;
+    left: 145px;
+    .product-logo {
+      position: absolute;
+      left: -256px;
+      top: 100px;
+      width: 350px;
+
+    }
+
+    .product-title {
+      text-align: center;
+      font-size: 26px;
+      font-weight: 700;
+      margin-bottom: 28px;
+    }
+  }
+  .product-info {
+    background: url("../img/product.png") no-repeat;
+    width: 1050px;
+    height: 280px;
+    background-size: contain;
+    margin: 0 auto;
+    position: relative;
+    left: 40px;
+    display: flex;
+    li {
+      width: 320px;
+      height: 256px;
+      text-align: center;
+      padding: 190px 30px 0;
+      color: white;
+      font-size: 24px;
+      @include multiEllipsis(2);
+    }
+    .hot {
+      margin: 0 42px;
+    }
   }
 }
 // 分页

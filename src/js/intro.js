@@ -27,7 +27,7 @@ function navInit () {
     $('.nav > li').on('click', function (e) {
         $(e.currentTarget).siblings().removeClass('active')
         $(e.currentTarget).toggleClass('active')
-        let el = $(e.currentTarget)
+        var el = $(e.currentTarget)
         $(document).one("click", function(){
             el.removeClass('active');
         });
@@ -62,31 +62,31 @@ function developmentInit () {
     $('.development .page-content').css('height', $('.page-content').height() + 20)
 }
 function recruitmentInit () {
-    for (let i =0; i < $('.recruitment-content-brief').length; i++) {
+    for (var i =0; i < $('.recruitment-content-brief').length; i++) {
         $('.recruitment-content-brief').eq(i).html($('.recruitment-content-detail').eq(i).html().replace(/<[^>]+>/g, ''))
     }
 
-    $('.recruitment-list').on('click', '.describe-close ', (e) => {
+    $('.recruitment-list').on('click', '.describe-close ', function(e) {
         $(e.currentTarget).hide().siblings('.describe-open').show()
         $(e.currentTarget).parent().parent().find('.recruitment-content-detail').show()
         $(e.currentTarget).parent().parent().find('.recruitment-content-brief').hide()
 
     })
-    $('.recruitment-list').on('click', '.describe-open ', (e) => {
+    $('.recruitment-list').on('click', '.describe-open ', function (e) {
         $(e.currentTarget).hide().siblings('.describe-close').show()
         $(e.currentTarget).parent().parent().find('.recruitment-content-brief').show()
         $(e.currentTarget).parent().parent().find('.recruitment-content-detail').hide()
 
     })
-    $('.apply').on('click', (e) => {
-        $('#resume h4').html(`申请${$(e.currentTarget).parent().find('h5').html()}岗位`)
+    $('.apply').on('click', function (e) {
+        $('#resume h4').html('申请'+ $(e.currentTarget).parent().find('h5').html()+ '岗位')
         $('#resume').attr('recruit', $(e.currentTarget).attr('recruit'))
     })
     // 验证码
-    $('.verify').on('input propertychange', (e) => {
+    $('.verify').on('input propertychange', function(e) {
         console.log($(e.currentTarget).val())
         if ($(e.currentTarget).val().length === 4) {
-            let formData = new FormData()
+            var formData = new FormData()
             formData.append('captcha', $(e.currentTarget).val())
             $.ajax({
                 url: '/captcha.php', // 地址
@@ -107,9 +107,9 @@ function recruitmentInit () {
         }
     })
     // 提交
-    $('#resume .btn-primary').on('click', (e) => {
-        let formData = new FormData()
-        let file = $('#resume').find('input')[0].files[0]
+    $('#resume .btn-primary').on('click', function (e) {
+        var formData = new FormData()
+        var file = $('#resume').find('input')[0].files[0]
         if (!file) {
             spop({
                 template: '请上传文件',

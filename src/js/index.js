@@ -20,7 +20,7 @@ function navInit() {
     $('.nav > li').on('click', function (e) {
         $(e.currentTarget).siblings().removeClass('active')
         $(e.currentTarget).toggleClass('active')
-        let el = $(e.currentTarget)
+        var el = $(e.currentTarget)
         $(document).one("click", function(){
             el.removeClass('active');
         });
@@ -70,7 +70,7 @@ function scrollInit () {
     if (window.scrollY === 0) {
         this.scrollFn()
     } else {
-        for (let i = 0, item = $('[data-scroll]'); i < item.length; i++) {
+        for (var i = 0, item = $('[data-scroll]'); i < item.length; i++) {
             item.eq(i).addClass('scroll')
         }
     }
@@ -93,10 +93,10 @@ function scrollNav () {
     }
 }
 function scrollFn  () {
-    let scroll = $('[data-scroll]')
+    var scroll = $('[data-scroll]')
     if (scroll) {
-        let index = 0;
-        for (let i = 0, item = $('[data-scroll]'); i < item.length; i++) {
+        var index = 0;
+        for (var i = 0, item = $('[data-scroll]'); i < item.length; i++) {
             if (Math.abs(item[i].offsetTop - window.scrollY) < Math.abs(item[index].offsetTop - window.scrollY - 600)) {
                 index = i;
             }
