@@ -547,10 +547,12 @@ section {
       margin-bottom: 60px;
     }
     .new-item {
-      display: flex;
+      display: inline-block;
       img {
         width: 200px;
         height: 150px;
+        float: left;
+        margin-right: 14px;
       }
       &:hover {
         cursor: pointer;

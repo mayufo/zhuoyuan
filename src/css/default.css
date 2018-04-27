@@ -410,10 +410,12 @@ section {
     margin-right: 60px;
     margin-bottom: 60px; }
   .new ul .new-item {
-    display: flex; }
+    display: inline-block; }
     .new ul .new-item img {
       width: 200px;
-      height: 150px; }
+      height: 150px;
+      float: left;
+      margin-right: 14px; }
     .new ul .new-item:hover {
       cursor: pointer; }
   .new ul .new-content {
