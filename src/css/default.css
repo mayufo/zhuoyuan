@@ -591,10 +591,10 @@ footer {
     position: absolute;
     right: 0;
     top: 0;
-    padding: 0 0 0 25px; }
+    padding: 0 0 0 22px; }
     .page-wrap .bread-nav .next .next-title {
       padding-left: 56px;
-      max-width: 170px;
+      max-width: 171px;
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
