@@ -28,3 +28,6 @@ newContent.html 新闻详情页面
 
 recruitment.html 招聘页面
 浏览地址 https://mayufo.github.io/zhuoyuan/recruitment.html
+
+recruitment.html 产品介绍
+浏览地址 https://mayufo.github.io/zhuoyuan/product.html
