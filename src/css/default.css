@@ -30,7 +30,7 @@ section {
     font-weight: 700;
     text-align: center;
     position: relative;
-    padding-bottom: 90px; }
+    padding-bottom: 80px; }
     section > h4::after {
       content: '';
       display: block;
@@ -122,9 +122,11 @@ section {
         line-height: 120px;
         position: relative;
         cursor: pointer;
-        width: 92px; }
+        width: auto;
+        margin-right: 10px; }
         .nav-wrap nav .nav .nav-item:first-child {
-          width: 62px; }
+          margin-right: 14px;
+          padding: 0; }
         .nav-wrap nav .nav .nav-item > a {
           padding-bottom: 4px;
           color: #333333; }
@@ -133,14 +135,14 @@ section {
             display: none;
             position: absolute;
             top: 1px;
-            right: 6px; }
+            right: 0; }
         .nav-wrap nav .nav .nav-item .children-list {
           display: none;
           position: absolute;
           background: white;
           left: 0;
-          width: 130px;
-          top: 84px;
+          width: 148px;
+          top: 68px;
           border-top: 2px solid #83dfba;
           box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.65);
           padding: 20px; }
@@ -150,7 +152,8 @@ section {
             margin-top: 18px; }
           .nav-wrap nav .nav .nav-item .children-list > li > a {
             color: #333333;
-            cursor: pointer; }
+            cursor: pointer;
+            font-size: 14px; }
             .nav-wrap nav .nav .nav-item .children-list > li > a:hover {
               color: #06bf75; }
         .nav-wrap nav .nav .nav-item:hover > a {
@@ -159,6 +162,12 @@ section {
           cursor: pointer; }
           .nav-wrap nav .nav .nav-item:hover > a i {
             color: white; }
+      .nav-wrap nav .nav .high-light > a {
+        color: white;
+        font-weight: 700;
+        cursor: pointer; }
+        .nav-wrap nav .nav .high-light > a i {
+          color: white; }
       .nav-wrap nav .nav .active .children-list {
         display: block;
         animation: childNav .3s; }
@@ -169,8 +178,8 @@ section {
       font-size: 0; }
       .nav-wrap nav .language a {
         font-size: 16px;
-        width: 42px;
-        line-height: 26px;
+        width: 40px;
+        line-height: 24px;
         color: #333333;
         background: #999999;
         display: inline-block;
@@ -246,6 +255,8 @@ section {
   top: 0; }
   .suspension nav .header {
     height: 100px; }
+  .suspension nav .nav {
+    margin-bottom: 0; }
   .suspension nav .nav .nav-item {
     line-height: 100px; }
   .suspension nav .language {
@@ -275,7 +286,7 @@ section {
     .feature ul > li > a .icon-item4 {
       background: url("../img/icon.png") -699px -446px no-repeat; }
     .feature ul > li > a .info {
-      padding: 0 44px 30px;
+      padding: 0 44px 28px;
       color: inherit; }
       .feature ul > li > a .info h5 {
         font-size: 20px;
@@ -283,7 +294,7 @@ section {
         padding-top: 8px;
         color: inherit; }
       .feature ul > li > a .info p {
-        padding-top: 18px;
+        padding-top: 16px;
         text-align: center;
         line-height: 25px;
         color: inherit;
@@ -490,7 +501,7 @@ footer {
         position: absolute;
         left: -90px; }
     footer .footer-content .contact {
-      margin: 20px 0 26px 0;
+      margin: 20px 0 24px 0;
       position: relative;
       left: 8px; }
       footer .footer-content .contact li {
@@ -563,13 +574,14 @@ footer {
     footer .QR h4 {
       color: #999999;
       text-align: center;
-      padding-bottom: 10px;
-      width: 100px; }
+      width: 100px;
+      margin-bottom: 10px; }
     footer .QR img {
       width: 100px; }
     footer .QR .rights {
       color: #999999;
-      margin-top: 21px; }
+      margin-top: 21px;
+      font-size: 14px; }
 
 .page-wrap .bread-nav {
   margin: 0 auto;
@@ -579,13 +591,16 @@ footer {
   position: relative;
   top: -40px;
   background: white; }
-  .page-wrap .bread-nav .position .nav-item {
-    cursor: pointer; }
-    .page-wrap .bread-nav .position .nav-item:last-child {
-      color: #06bf75; }
-    .page-wrap .bread-nav .position .nav-item:not(:last-child):after {
-      content: '>';
-      padding-left: 7px; }
+  .page-wrap .bread-nav .position {
+    font-size: 14px; }
+    .page-wrap .bread-nav .position .nav-item {
+      cursor: pointer;
+      font-size: 14px; }
+      .page-wrap .bread-nav .position .nav-item:last-child {
+        color: #06bf75; }
+      .page-wrap .bread-nav .position .nav-item:not(:last-child):after {
+        content: '>';
+        padding-left: 7px; }
   .page-wrap .bread-nav .next {
     width: 260px;
     line-height: 83px;
@@ -593,7 +608,8 @@ footer {
     position: absolute;
     right: 0;
     top: 0;
-    padding: 0 0 0 22px; }
+    padding: 0 0 0 22px;
+    font-size: 14px; }
     .page-wrap .bread-nav .next .next-title {
       padding-left: 56px;
       max-width: 171px;
@@ -602,7 +618,8 @@ footer {
       text-overflow: ellipsis;
       position: absolute;
       display: inline-block;
-      cursor: pointer; }
+      cursor: pointer;
+      font-size: 14px; }
       .page-wrap .bread-nav .next .next-title:before {
         content: '';
         background: url("../img/icon.png") -4px -3px no-repeat;
@@ -610,7 +627,7 @@ footer {
         height: 20px;
         position: absolute;
         top: 29px;
-        left: 22px; }
+        left: 19px; }
 
 .page-wrap h4 {
   color: #06bf75;
@@ -1155,22 +1172,25 @@ footer {
   padding: 0 30px; }
   .recruitment-page .recruitment-list li {
     border-bottom: 1px solid #cccccc;
-    padding-bottom: 50px; }
+    padding-bottom: 60px; }
     .recruitment-page .recruitment-list li:first-child .recruitment-item-header {
       margin-top: 0; }
   .recruitment-page .recruitment-list .recruitment-item-header {
-    margin: 50px 0;
+    margin: 60px 0 20px 0;
     display: flex;
     font-size: 18px; }
     .recruitment-page .recruitment-list .recruitment-item-header h5 {
-      font-size: 20px;
-      flex-grow: 2;
-      width: 160px; }
+      font-size: 18px;
+      width: 584px;
+      margin: 0;
+      position: relative;
+      top: 3px; }
     .recruitment-page .recruitment-list .recruitment-item-header .describe-open {
       color: #06bf75;
       position: relative;
       cursor: pointer;
-      display: none; }
+      display: none;
+      width: 166px; }
       .recruitment-page .recruitment-list .recruitment-item-header .describe-open:before {
         content: '';
         background: url("../img/icon.png") -1180px -118px no-repeat;
@@ -1182,7 +1202,8 @@ footer {
     .recruitment-page .recruitment-list .recruitment-item-header .describe-close {
       color: #06bf75;
       position: relative;
-      cursor: pointer; }
+      cursor: pointer;
+      width: 166px; }
       .recruitment-page .recruitment-list .recruitment-item-header .describe-close:before {
         content: '';
         background: url("../img/icon.png") -1180px -118px no-repeat;
@@ -1192,28 +1213,32 @@ footer {
         left: -20px;
         top: 6px;
         transform: rotate(180deg); }
+    .recruitment-page .recruitment-list .recruitment-item-header .needNumber {
+      width: 118px; }
+    .recruitment-page .recruitment-list .recruitment-item-header .time {
+      width: 150px; }
     .recruitment-page .recruitment-list .recruitment-item-header .apply {
       border-radius: 4px;
       background: #06bf75;
-      padding: 6px 18px 6px 40px;
+      padding: 4px 18px 4px 36px;
       display: inline-block;
       position: relative;
       top: -6px;
       color: white;
-      font-size: 18px;
+      font-size: 16px;
       cursor: pointer;
       overflow: hidden;
-      text-decoration: none; }
+      text-decoration: none;
+      height: 36px; }
       .recruitment-page .recruitment-list .recruitment-item-header .apply:before {
         content: '';
         position: absolute;
         background: url("../img/icon.png") -1260px -118px no-repeat;
         height: 20px;
         width: 20px;
-        top: 11px;
-        left: 17px; }
+        top: 9px;
+        left: 13px; }
     .recruitment-page .recruitment-list .recruitment-item-header div {
-      flex-grow: 1;
       color: #999999; }
   .recruitment-page .recruitment-list .recruitment-content-detail {
     color: #333333;
@@ -1227,7 +1252,7 @@ footer {
     overflow: hidden;
     word-break: break-all;
     max-height: 84px;
-    width: 46%; }
+    width: 644px; }
 
 .product-page .product-content {
   margin-top: 0 !important;

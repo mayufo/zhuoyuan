@@ -91,7 +91,7 @@ section {
     opacity: 1;
   }
   > h4 {
-    @include header(90px);
+    @include header(80px);
   }
 }
 
@@ -190,9 +190,13 @@ section {
         line-height: 120px;
         position: relative;
         cursor: pointer;
-        width: 92px;
+        width: auto;
+        margin-right: 10px;
         &:first-child {
-          width: 62px;
+          margin-right: 14px;
+          padding: 0;
+
+
         }
         > a {
           padding-bottom: 4px;
@@ -202,7 +206,7 @@ section {
             display: none;
             position: absolute;
             top: 1px;
-            right: 6px;
+            right: 0;
           }
         }
 
@@ -211,8 +215,8 @@ section {
           position: absolute;
           background: white;
           left: 0;
-          width: 130px;
-          top: 84px;
+          width: 148px;
+          top: 68px;
           border-top: 2px solid $light;
           box-shadow: 0 2px 2px 0 rgba(0,0,0,0.65);
           padding: 20px;
@@ -228,12 +232,14 @@ section {
           > li > a {
             color: $text;
             cursor: pointer;
+            font-size: 14px;
 
             &:hover {
               color: $active;
             }
           }
         }
+
         &:hover {
           > a {
             color: white;
@@ -242,6 +248,16 @@ section {
             i {
               color: white;
             }
+          }
+        }
+      }
+      .high-light {
+        > a {
+          color: white;
+          font-weight: 700;
+          cursor: pointer;
+          i {
+            color: white;
           }
         }
       }
@@ -258,8 +274,8 @@ section {
       font-size: 0;
       a {
         font-size: 16px;
-        width: 42px;
-        line-height: 26px;
+        width: 40px;
+        line-height: 24px;
         color: $text;
         background: $background;
         display: inline-block;
@@ -355,6 +371,9 @@ section {
     .header {
       height: 100px;
     }
+    .nav {
+      margin-bottom: 0;
+    }
     .nav .nav-item {
       line-height: 100px;
     }
@@ -395,7 +414,7 @@ section {
         background: url("../img/icon.png") -699px -446px no-repeat;
       }
       .info {
-        padding: 0 44px 30px;
+        padding: 0 44px 28px;
         color: inherit;
         h5 {
           font-size: 20px;
@@ -404,7 +423,7 @@ section {
           color: inherit;
         }
         p {
-          padding-top: 18px;
+          padding-top: 16px;
           text-align: center;
           line-height: 25px;
           color: inherit;
@@ -636,7 +655,7 @@ footer {
     }
 
     .contact {
-      margin: 20px 0 26px 0;
+      margin: 20px 0 24px 0;
       position: relative;
       left: 8px;
       li {
@@ -735,8 +754,8 @@ footer {
     h4 {
       color: $background;
       text-align: center;
-      padding-bottom: 10px;
       width: 100px;
+      margin-bottom: 10px;
     }
     img {
       width: 100px;
@@ -744,6 +763,7 @@ footer {
     .rights {
       color: $background;
       margin-top: 21px;
+      font-size: 14px;
     }
   }
 }
@@ -758,8 +778,10 @@ footer {
     top: -40px;
     background: white;
     .position {
+      font-size: 14px;
       .nav-item {
         cursor: pointer;
+        font-size: 14px;
         &:last-child {
           color: $active;
         }
@@ -779,6 +801,7 @@ footer {
       right: 0;
       top: 0;
       padding: 0 0 0 22px;
+      font-size: 14px;
 
       .next-title {
         padding-left: 56px;
@@ -787,6 +810,7 @@ footer {
         position: absolute;
         display: inline-block;
         cursor: pointer;
+        font-size: 14px;
         &:before {
           content: '';
           background: url("../img/icon.png") -4px -3px no-repeat;
@@ -794,7 +818,7 @@ footer {
           height: 20px;
           position: absolute;
           top: 29px;
-          left: 22px;
+          left: 19px;
         }
       }
     }
@@ -1411,7 +1435,7 @@ footer {
     padding: 0 30px;
     li {
       border-bottom: 1px solid $line;
-      padding-bottom: 50px;
+      padding-bottom: 60px;
       &:first-child {
         .recruitment-item-header {
           margin-top: 0;
@@ -1419,19 +1443,22 @@ footer {
       }
     }
     .recruitment-item-header {
-      margin: 50px 0;
+      margin:60px 0 20px 0;
       display: flex;
       font-size: 18px;
       h5 {
-        font-size: 20px;
-        flex-grow: 2;
-        width: 160px;
+        font-size: 18px;
+        width: 584px;
+        margin: 0;
+        position: relative;
+        top: 3px;
       }
       .describe-open {
         color: $active;
         position: relative;
         cursor: pointer;
         display: none;
+        width: 166px;
         &:before {
           content: '';
           background: url("../img/icon.png") -1180px -118px no-repeat;
@@ -1446,6 +1473,8 @@ footer {
         color: $active;
         position: relative;
         cursor: pointer;
+        width: 166px;
+
         &:before {
           content: '';
           background: url("../img/icon.png") -1180px -118px no-repeat;
@@ -1457,18 +1486,25 @@ footer {
           transform: rotate(180deg);
         }
       }
+      .needNumber {
+        width: 118px;
+      }
+      .time {
+        width: 150px;
+      }
       .apply {
         border-radius: 4px;
         background: $active;
-        padding: 6px 18px 6px 40px;
+        padding: 4px 18px 4px 36px;
         display: inline-block;
         position: relative;
         top: -6px;
         color: white;
-        font-size: 18px;
+        font-size: 16px;
         cursor: pointer;
         overflow: hidden;
         text-decoration: none;
+        height: 36px;
 
         &:before {
           content: '';
@@ -1476,12 +1512,11 @@ footer {
           background: url("../img/icon.png") -1260px -118px no-repeat;
           height: 20px;
           width: 20px;
-          top: 11px;
-          left: 17px;
+          top: 9px;
+          left: 13px;
         }
       }
       div {
-        flex-grow: 1;
         color: $background;
       }
     }
@@ -1493,7 +1528,7 @@ footer {
       color: $text-light;
       @include multiEllipsis(3);
       max-height: 84px;
-      width: 46%;
+      width: 644px;
     }
 
   }
