@@ -823,11 +823,16 @@ footer {
 
 .apply .apply-wrap {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   flex-wrap: wrap; }
   .apply .apply-wrap li {
     position: relative;
-    margin-bottom: 58px; }
+    margin-bottom: 58px;
+    margin-left: 20px; }
+    .apply .apply-wrap li:first-child {
+      margin: 0; }
+    .apply .apply-wrap li:nth-child(4n+1) {
+      margin: 0; }
     .apply .apply-wrap li img {
       width: 285px;
       height: 197px; }
@@ -837,7 +842,11 @@ footer {
       font-size: 20px;
       font-weight: 700;
       margin-top: 10px;
-      margin-bottom: 5px; }
+      margin-bottom: 5px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      width: 285px; }
     .apply .apply-wrap li .intro {
       display: none;
       width: 285px;

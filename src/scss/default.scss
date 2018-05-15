@@ -1052,11 +1052,18 @@ footer {
 .apply {
   .apply-wrap {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     flex-wrap: wrap;
     li {
       position: relative;
       margin-bottom: 58px;
+      margin-left: 20px;
+      &:first-child {
+        margin: 0;
+      }
+      &:nth-child(4n+1) {
+        margin: 0;
+      }
       img {
         width: 285px;
         height: 197px;
@@ -1069,6 +1076,8 @@ footer {
         font-weight: 700;
         margin-top: 10px;
         margin-bottom: 5px;
+        @include ellipsis;
+        width: 285px;
       }
       .intro {
         display: none;
